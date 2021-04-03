@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   >
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:elevation="20dp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp">
+
+            <LinearLayout
+                android:id="@+id/lin_pro_details"
+                android:layout_margin="@dimen/_4sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin_one"
+                android:orientation="horizontal">
+                >
+                <ImageView
+                    android:adjustViewBounds="true"
+                    android:id="@+id/img_propertylist"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:src="@drawable/home"
+                    android:background="@color/white"
+                    android:scaleType="centerCrop"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/light_colorText"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:paddingRight="@dimen/_10sdp">
+
+                    <TextView
+                        android:singleLine="true"
+                        android:textAllCaps="true"
+                        android:id="@+id/garment_title_property"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GHB258"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13ssp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        ></LinearLayout>
+
+                    <TextView
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:id="@+id/address_propertylist"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="match_parent"
+                        android:text="location"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8ssp" />
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_marginRight="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="right|bottom">
+
+                <ImageView
+                    android:id="@+id/iv_add_propetylist"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:background="@drawable/add_pro_white"
+                    android:src="@drawable/ic_add"/>
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/iv_remove_propetylist"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_toLeftOf="@+id/iv_add_propetylist"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:background="@color/white"
+                    android:src="@drawable/ic_remove_black_24dp"/>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+
+
+
+</RelativeLayout>

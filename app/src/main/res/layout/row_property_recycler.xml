@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/lin_itemview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <android.support.v7.widget.CardView
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_120sdp"
+            android:elevation="20dp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_1sdp"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rel_tenant"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light"
+                >
+
+                <ImageView
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/picture_outline"
+                    android:layout_margin="0.8dp"
+                    android:id="@+id/iv_property_image"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/home"
+                   />
+
+                <RelativeLayout
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    >
+                <ImageView
+
+                    android:visibility="visible"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="@dimen/_3sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:src="@drawable/ic_camera_alt_black_24dp"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/_52sdp"
+                    android:id="@+id/lin"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_toRightOf="@+id/iv_property_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:textSize="@dimen/_13ssp"
+                        android:id="@+id/tv_property_name"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:text="Arindam Kundu"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="@dimen/_40sdp"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps="true"/>
+                    <View
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_marginBottom="@dimen/_3sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:background="@color/white"></View>
+                    <TextView
+                        android:layout_marginRight="@dimen/_45sdp"
+                        android:textStyle="bold"
+                        android:id="@+id/tv_property_location"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_8ssp"
+                        android:text="Trilochanpur"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ln_bt"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/iv_property_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                   >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+                    <TextView
+                        android:singleLine="true"
+                        android:id="@+id/cureent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Current Status :"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_9ssp"
+                       />
+                    <TextView
+                       android:paddingLeft="@dimen/_2sdp"
+                        android:singleLine="true"
+                        android:layout_weight="2"
+                        android:id="@+id/tv_current_status"
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_toRightOf="@+id/cureent"
+                        android:visibility="visible"
+                        android:textColor="@color/white"
+                        android:text="Vacant"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/_7ssp"
+                        android:textStyle="bold"
+                        android:layout_alignParentRight="true"
+                        android:paddingLeft="@dimen/_4sdp"
+                        android:paddingRight="@dimen/_4sdp"
+                        android:visibility="gone"
+                        android:id="@+id/tv_occupied"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:text="View Tenant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/view_btn"/>
+                    <TextView
+                        android:singleLine="true"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_8ssp"
+                        android:layout_alignParentRight="true"
+                        android:paddingLeft="@dimen/_4sdp"
+                        android:paddingRight="@dimen/_4sdp"
+                        android:visibility="visible"
+                        android:id="@+id/tv_vacant"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:text="Add Tenant"
+                        android:background="@drawable/add_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                      />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_toRightOf="@+id/iv_property_image"
+                    android:layout_marginBottom="@dimen/_7sdp"
+                    android:layout_above="@+id/ln_bt"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_20sdp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_property_price"
+                        android:textSize="@dimen/_15ssp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5000 "
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:textSize="@dimen/_10ssp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" / Months"
+                        android:textColor="@color/white"/>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                <ImageView
+                    android:background="@color/white"
+                    android:visibility="gone"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/tenant_profile_picture"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:src="@drawable/man"/>
+                    <TextView
+                        android:background="@color/white"
+                        android:visibility="gone"
+                        android:id="@+id/txt_tenant"
+                        android:paddingBottom="1dp"
+                        android:paddingTop="1dp"
+                        android:gravity="center"
+                        android:textSize="@dimen/_5ssp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Tenant"/>
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</RelativeLayout>

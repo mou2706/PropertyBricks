@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.Fragment_Complex"
+    android:orientation="vertical">
+   <RelativeLayout
+       android:id="@+id/rel_com"
+       android:layout_width="wrap_content"
+       android:layout_height="@dimen/_30sdp"
+       >
+      <ImageView
+          android:layout_marginRight="@dimen/_10sdp"
+          android:layout_centerVertical="true"
+          android:id="@+id/iv_addcomplex"
+          android:layout_alignParentRight="true"
+          android:layout_gravity="center_vertical"
+          android:padding="@dimen/_2sdp"
+          android:src="@drawable/ic_add_black_24dp"
+          android:background="@drawable/view_btn"
+          android:layout_width="@dimen/_20sdp"
+          android:layout_height="@dimen/_20sdp" />
+      <TextView
+          android:layout_centerVertical="true"
+         android:layout_toLeftOf="@+id/iv_addcomplex"
+          android:id="@+id/tv_addcomplex"
+          android:layout_marginRight="@dimen/_5sdp"
+          android:layout_gravity="center"
+          android:textColor="@color/dark_colorText"
+          android:background="@drawable/add_pro_white"
+          android:paddingLeft="@dimen/_1sdp"
+          android:paddingRight="@dimen/_1sdp"
+          android:gravity="center_vertical"
+          android:layout_width="wrap_content"
+          android:layout_height="@dimen/_20sdp"
+          android:text="ADD COMPLEX"
+          android:textAllCaps="true"
+          android:textSize="@dimen/_8ssp"
+          android:textStyle="bold"
+
+          />
+      <TextView
+          android:paddingLeft="@dimen/_10sdp"
+          android:id="@+id/tv1"
+          android:textAllCaps="false"
+          android:textSize="@dimen/_8ssp"
+          android:textStyle="bold"
+          android:textColor="@color/dark_colorText"
+          android:gravity="center"
+          android:layout_width="wrap_content"
+          android:layout_height="@dimen/_30sdp"
+          android:text="Total Complex:"/>
+      <TextView
+          android:layout_toRightOf="@+id/tv1"
+          android:id="@+id/tv_count_complex"
+          android:textAllCaps="false"
+          android:text="0"
+          android:textSize="@dimen/_12ssp"
+          android:textStyle="bold"
+          android:textColor="@color/dark_colorText"
+         android:paddingLeft="5sp"
+          android:gravity="center"
+          android:layout_width="wrap_content"
+          android:layout_height="@dimen/_30sdp"
+         />
+
+
+
+
+   </RelativeLayout>
+
+   <android.support.v7.widget.RecyclerView
+       android:layout_below="@+id/rel_com"
+       android:id="@+id/recycler_complex"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+   </android.support.v7.widget.RecyclerView>
+   <RelativeLayout
+       android:visibility="gone"
+       android:id="@+id/rel_errorshow1"
+       android:layout_below="@+id/rel_com"
+
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:gravity="center">
+
+      <ImageView
+          android:layout_centerHorizontal="true"
+          android:id="@+id/cloud_off"
+          android:layout_width="@dimen/_100sdp"
+          android:layout_height="@dimen/_100sdp"
+          android:src="@drawable/ic_cloud_off_black_24dp"/>
+      <TextView
+          android:gravity="center"
+          android:id="@+id/tv_error_msg1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="No internet connection"
+          android:layout_below="@id/cloud_off"/>
+   </RelativeLayout>
+
+
+</RelativeLayout>

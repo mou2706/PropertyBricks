@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1065319717745",
+    "firebase_url": "https://propertybricks-5a7d8.firebaseio.com",
+    "project_id": "propertybricks-5a7d8",
+    "storage_bucket": "propertybricks-5a7d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1065319717745:android:398f89af3aecc4de",
+        "android_client_info": {
+          "package_name": "com.openwebsolutions.propertybricks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1065319717745-bq40o7rnb40mod89osrti2mamkg8019g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.openwebsolutions.propertybricks",
+            "certificate_hash": "19179947b69f8c3b8efd93e29fa158ebfd324db9"
+          }
+        },
+        {
+          "client_id": "1065319717745-u6rq1iimh0npddtr6bk8mp7485p2havq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDviQVGkbVwjWY6E6I3Fw6BeeQYmN7iZ1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1065319717745-u6rq1iimh0npddtr6bk8mp7485p2havq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

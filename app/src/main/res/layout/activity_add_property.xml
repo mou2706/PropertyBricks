@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPropertyActivity.AddProperty">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/_10sdp">
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:background="@drawable/add_pro_white"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:id="@+id/iv_addproperty_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_arrow_back_green_24dp"/>
+            <TextView
+                android:paddingLeft="@dimen/_5sdp"
+                android:id="@+id/txt_designer_name_pro"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_colorText"
+                android:textSize="@dimen/_14ssp"
+                android:text="Submit your property" />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:orientation="vertical"
+                android:background="@color/light_colorText"
+                android:gravity="center"
+                >
+
+                <TextView
+                    android:layout_centerHorizontal="true"
+                    android:visibility="visible"
+                    android:textSize="@dimen/_14ssp"
+                    android:id="@+id/tv_upload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload image"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    />
+
+                <ImageView
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/tv_upload"
+                    android:visibility="visible"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:id="@+id/camera"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:src="@drawable/ic_camera_alt_black_24dp"
+                    />
+                <ImageView
+                    android:scaleType="fitXY"
+                    android:background="@drawable/picture_outline"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:id="@+id/uploaded_imagae"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_80sdp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp">
+
+                <EditText
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:textColorHint="@color/light_colorText"
+                    android:id="@+id/search_et"
+                    android:imeOptions="actionSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/counter_design"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_20sdp"
+                    android:hint="Search location"
+                    android:singleLine="true"/>
+                <ImageView
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/gone"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_place_green"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:id="@+id/list_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_below="@+id/rel_search_layout"
+                />
+
+            <LinearLayout
+                android:background="@drawable/counter_design"
+                android:id="@+id/lin_map"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:nestedScrollingEnabled="false"
+               >
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_170sdp"
+                />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_details_property"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_10sdp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                >
+                <EditText
+                    android:paddingRight="@dimen/_5sdp"
+                    android:id="@+id/et_property_name"
+                    android:textSize="@dimen/_9ssp"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/counter_design"
+                    android:hint="Property Name"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:textColorHint="@color/light_colorText"
+                    />
+                <ImageView
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_edit_black_24dp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+                <EditText
+                    android:id="@+id/et_property_details"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:textSize="@dimen/_9ssp"
+                    android:inputType="text"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_60sdp"
+                    android:background="@drawable/counter_design"
+                    android:gravity="top"
+                    android:hint="Write something about your property"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:textColorHint="@color/light_colorText"
+                    />
+                <ImageView
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_edit_black_24dp"
+                    android:layout_marginBottom="@dimen/_5sdp"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/counter_design">
+                <ImageView
+                    android:layout_marginLeft="@dimen/_10sdp"
+                  android:id="@+id/rupee"
+                    android:layout_centerVertical="true"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_8sdp"
+                    android:src="@drawable/rupee"/>
+
+                <EditText
+                    android:background="@android:color/transparent"
+                    android:layout_toRightOf="@+id/rupee"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:id="@+id/et_property_price"
+                    android:textSize="@dimen/_9ssp"
+                    android:inputType="number"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+
+                    android:hint="Price in figure"
+
+                    android:textColorHint="@color/light_colorText"
+                    />
+                <ImageView
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_edit_black_24dp"/>
+            </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_delete_tenant"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                >
+                <TextView
+                    android:id="@+id/txt_name1"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tenant Name :"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_8ssp"
+                    android:textColor="@color/dark_colorText"
+                   />
+                <TextView
+                    android:paddingLeft="@dimen/_2sdp"
+                    android:textSize="@dimen/_8ssp"
+                    android:layout_toRightOf="@+id/txt_name1"
+                    android:id="@+id/txt_tennat_holder"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    />
+
+                <android.support.v7.widget.CardView
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:elevation="20dp"
+                    android:layout_marginBottom="@dimen/_5sdp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                       >
+
+                <TextView
+                    android:id="@+id/tv_delete_tenant_edit"
+                    android:singleLine="true"
+                    android:paddingLeft="@dimen/_7sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:background="@color/dark_colorText"
+                    android:paddingRight="@dimen/_7sdp"
+                    android:textSize="@dimen/_9ssp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:textColor="@color/white"
+                    android:text="Delete Tenant"
+                    android:textStyle="bold"
+                    />
+                        <com.github.ybq.android.spinkit.SpinKitView
+                            android:layout_centerInParent="true"
+                            android:visibility="gone"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/spin_kit2_delete"
+                            style="@style/SpinKitView.Large.ThreeBounce"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_gravity="center"
+                            app:SpinKit_Color="@color/dark_colorText" />
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone"
+                android:id="@+id/tv_sucessfull_delete"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:text="Successfully deleted..."
+                android:textColor="@color/dark_colorText"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:elevation="20dp"
+                android:layout_marginBottom="@dimen/_10sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                >
+
+                <TextView
+                    android:id="@+id/submit_pro"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_12ssp"
+                    android:background="@color/dark_colorText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:gravity="center"/>
+                <com.github.ybq.android.spinkit.SpinKitView
+
+                    android:layout_below="@+id/txt"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/spin_kit3_pro"
+                    style="@style/SpinKitView.Large.Wave"
+                    android:layout_width="100dp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_gravity="center"
+                    app:SpinKit_Color="@color/white" />
+
+            </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

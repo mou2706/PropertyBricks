@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    <TextView
+        android:textStyle="bold"
+        android:textSize="@dimen/_13ssp"
+        android:id="@+id/textView_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Complex name"
+        android:textColor="@color/dark_colorText"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_4sdp"
+        android:paddingRight="@dimen/_10sdp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView_1"
+            android:layout_toRightOf="@+id/textView_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:text="("
+            />
+
+        <TextView
+
+            android:id="@+id/tv_type"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:text="complex"
+            android:textColor="@color/black"/>
+
+
+        <TextView
+            android:layout_toRightOf="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:text=")"/>
+        </LinearLayout>
+        <!--<ImageView-->
+            <!--android:paddingTop="@dimen/_5sdp"-->
+
+            <!--android:layout_width="@dimen/_30sdp"-->
+            <!--android:layout_height="@dimen/_30sdp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:src="@drawable/location"/>-->
+
+
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_loc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="normal"
+        android:text="Location"
+        android:layout_marginTop="-1dp"
+        android:textColor="@color/black"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_2sdp"
+        android:paddingRight="@dimen/_10sdp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/dark_colorText" />
+</LinearLayout>

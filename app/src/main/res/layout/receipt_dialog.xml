@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/_10sdp"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:id="@+id/rel_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:background="@color/dark_colorText"
+                android:src="@drawable/places_ic_clear"
+                android:padding="@dimen/_4sdp"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_marginLeft="@dimen/_25sdp"
+            android:layout_marginRight="@dimen/_25sdp"
+            android:gravity="right|center"
+            android:id="@+id/txt_designer_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:paddingTop="@dimen/_3sdp"
+            android:text="Do You Want To Attach Receipt?"
+            android:textColor="@color/dark_colorText"
+            android:textSize="@dimen/_12ssp"
+            />
+
+      <android.support.v7.widget.CardView
+          android:layout_marginTop="@dimen/_10sdp"
+          android:layout_marginLeft="@dimen/_25sdp"
+          android:layout_marginRight="@dimen/_25sdp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:elevation="20dp">
+
+          <LinearLayout
+              android:weightSum="2"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/_25sdp"
+              android:orientation="horizontal"
+              >
+              <RelativeLayout
+                  android:layout_width="0dp"
+                  android:layout_weight="1.3"
+                  android:id="@+id/img_rel_b"
+
+
+                  android:layout_height="match_parent">
+              <TextView
+                  android:id="@+id/browse"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:text="Browse..."
+                  android:gravity="center_vertical"
+                  android:paddingLeft="@dimen/_10sdp"/>
+                  <com.github.ybq.android.spinkit.SpinKitView
+                      android:layout_centerInParent="true"
+                      android:visibility="gone"
+                      xmlns:app="http://schemas.android.com/apk/res-auto"
+                      android:id="@+id/spin_kit3_business"
+                      style="@style/SpinKitView.Large.Wave"
+                      android:layout_width="100dp"
+                      android:layout_height="@dimen/_20sdp"
+                      android:layout_gravity="center"
+                      app:SpinKit_Color="@color/white" />
+
+                  <TextView
+                      android:id="@+id/txt_uploading_"
+                      android:visibility="gone"
+                      android:textColor="@color/white"
+                      android:paddingLeft="110dp"
+                      android:layout_centerInParent="true"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Uploading..."/>
+                  <TextView
+                      android:textStyle="bold"
+                      android:id="@+id/txt_successfull_business"
+                      android:visibility="gone"
+                      android:textColor="@color/light_colorText"
+                      android:layout_width="match_parent"
+                      android:layout_height="@dimen/_35sdp"
+                      android:text="Successfully uploaded"
+                      android:gravity="center"/>
+              </RelativeLayout>
+              <RelativeLayout
+                  android:id="@+id/rel_pic_upload"
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="0.7"
+                  android:gravity="center"
+                  android:background="@color/dark_colorText">
+
+                  <ImageView
+                      android:id="@+id/cam"
+                      android:layout_width="@dimen/_18sdp"
+                      android:layout_height="@dimen/_18ssp"
+                      android:src="@drawable/ic_camera_alt_black_24dp"/>
+                  <TextView
+                      android:gravity="center"
+                      android:layout_toRightOf="@+id/cam"
+                      android:layout_width="wrap_content"
+                      android:layout_height="@dimen/_18sdp"
+                      android:text="Upload"
+                      android:textColor="@color/white"
+                      android:paddingLeft="@dimen/_4sdp"/>
+              </RelativeLayout>
+
+          </LinearLayout>
+
+
+      </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_25sdp"
+            android:layout_marginRight="@dimen/_25sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_colorText"
+            android:elevation="20dp"
+            android:layout_marginBottom="@dimen/_10sdp">
+
+            <LinearLayout
+                android:id="@+id/apply"
+
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:orientation="horizontal"
+                android:background="@color/dark_colorText"
+                >
+                <TextView
+                    android:textSize="@dimen/_11ssp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:text="Apply"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/_10sdp"/>
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

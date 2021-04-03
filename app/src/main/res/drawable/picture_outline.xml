@@ -1,0 +1,26 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <gradient
+        android:angle="45"
+        android:centerX="35%"
+        android:centerColor="@color/light_colorText"
+        android:startColor="@color/light_colorText"
+        android:endColor="@color/light_colorText"
+        android:type="linear"
+        />
+    <padding
+        android:left="0dp"
+        android:top="0dp"
+        android:right="0dp"
+        android:bottom="0dp"
+        />
+    <!--<size-->
+        <!--android:width="50dp"-->
+        <!--android:height="@dimen/_5sdp"-->
+        <!--/>-->
+    <stroke
+        android:width="0.1dp"
+        android:color="@color/white"
+        />
+</shape>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+    >
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/img_rel_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            >
+            <ImageView
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                android:id="@+id/iv_personal_pic_b"
+                android:background="@drawable/counter_design"
+                android:src="@drawable/man"
+                android:layout_centerInParent="true"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_70sdp" />
+            <ImageView
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:src="@drawable/places_ic_clear"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/name_bus"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/counter_design"
+            android:hint="Name *"
+            android:paddingLeft="@dimen/_10sdp"
+            android:textColorHint="@color/light_colorText"
+            />
+        <EditText
+            android:inputType="number"
+            android:maxLength="10"
+            android:id="@+id/phone_bus"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/counter_design"
+            android:hint="Phone *"
+            android:paddingLeft="@dimen/_10sdp"
+            android:textColorHint="@color/light_colorText"
+            />
+        <EditText
+            android:id="@+id/email_bus"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/counter_design"
+            android:hint="Email *"
+            android:paddingLeft="@dimen/_10sdp"
+            android:textColorHint="@color/light_colorText"
+            />
+        <EditText
+            android:id="@+id/address_bus"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:paddingTop="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:background="@drawable/counter_design"
+            android:gravity="top"
+            android:hint="Address *"
+            android:paddingLeft="@dimen/_10sdp"
+            android:textColorHint="@color/light_colorText"
+            />
+        <EditText
+            android:id="@+id/password_bus"
+            android:inputType="textPassword"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/counter_design"
+            android:hint="Password *"
+            android:paddingLeft="@dimen/_10sdp"
+            android:textColorHint="@color/light_colorText"
+            />
+        <EditText
+            android:inputType="textPassword"
+            android:id="@+id/confirm_password_bus"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/counter_design"
+            android:hint="Confirm Password *"
+            android:paddingLeft="@dimen/_10sdp"
+            android:textColorHint="@color/light_colorText"
+            />
+
+        <EditText
+            android:inputType="number"
+            android:id="@+id/gstn_business"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/counter_design"
+            android:hint="Comp. GSTIN *"
+            android:paddingLeft="@dimen/_10sdp"
+            android:textColorHint="@color/light_colorText"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            >
+        <TextView
+            android:id="@+id/tv_prifle_business"
+            android:layout_width="match_parent"
+            android:textSize="@dimen/_13ssp"
+            android:layout_height="@dimen/_35sdp"
+            android:text="Upload Profile Picture"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:background="@drawable/view_btn"
+            android:gravity="center"/>
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/spin_kit3_business"
+                style="@style/SpinKitView.Large.Wave"
+                android:layout_width="100dp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                app:SpinKit_Color="@color/white" />
+
+            <TextView
+                android:id="@+id/txt_uploading_bus"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:paddingLeft="110dp"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Uploading..."/>
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/txt_successfull_upload"
+                android:visibility="gone"
+                android:textColor="@color/light_colorText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:text="Successfully uploaded"
+                android:gravity="center"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

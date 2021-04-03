@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_10sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+
+                        android:id="@+id/searchin"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/ic_youtube_searched_for_black_24dp"/>
+
+                <TextView
+                    android:id="@+id/tv_recent_propertyname"
+                    android:gravity="center_vertical"
+                    android:layout_toRightOf="@+id/searchin"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:text="Name"/>
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_toRightOf="@+id/tv_recent_propertyname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_20sdp"
+                        android:text="("/>
+
+                    <TextView
+                        android:id="@+id/tv_recent_type"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:paddingRight="@dimen/_5sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Property"/>
+                    <TextView
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_toRightOf="@+id/tv_recent_propertyname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_20sdp"
+                        android:text=")"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/search_loc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:text="Location"
+                    android:layout_marginTop="-1dp"
+                    android:layout_marginLeft="@dimen/_40sdp"
+
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:nestedScrollingEnabled="false">
+
+
+
+    <include layout="@layout/nav_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/light_colorText"
+        >
+
+        <TextView
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:id="@+id/tv_tanents_menu"
+            android:text="Tenants"
+            android:background="@drawable/superlight"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp" />
+        <TextView
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:id="@+id/tv_properties_menu"
+            android:text="Properties"
+            android:background="@drawable/superlight"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp" />
+        <TextView
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:id="@+id/tv_complex_menu"
+            android:text="Complex"
+            android:background="@drawable/superlight"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp" />
+        <TextView
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:id="@+id/tv_billing"
+            android:text="Billings and Invoice"
+            android:background="@drawable/superlight"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp" />
+        <TextView
+            android:visibility="gone"
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:id="@+id/tv_help"
+            android:text="Help"
+            android:background="@drawable/superlight"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp" />
+        <TextView
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="center"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:id="@+id/tv_logout_menu"
+            android:text="Log Out"
+            android:background="@drawable/superlight"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp" />
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

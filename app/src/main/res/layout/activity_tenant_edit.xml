@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TenantEditActivity.TenantEdit">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <ImageView
+            android:background="@drawable/add_pro_white"
+            android:id="@+id/iv_tenantedit_back"
+            android:layout_width="wrap_content"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_arrow_back_green_24dp"/>
+        <TextView
+            android:paddingLeft="@dimen/_5sdp"
+            android:id="@+id/txt_designer_name"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:textStyle="bold"
+            android:textColor="@color/dark_colorText"
+            android:textSize="@dimen/_15ssp"
+            android:text="Edit Tenant" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:padding="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@color/light_colorText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin_one"
+                android:layout_toRightOf="@+id/img_dress"
+                android:background="@color/light_colorText"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_75sdp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img_tenant"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@color/back"
+                        android:scaleType="fitXY"
+                        />
+                    <com.github.ybq.android.spinkit.SpinKitView
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/spinkit3_vacant_business_edit"
+                        style="@style/SpinKitView.Large.Wave"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_gravity="center"
+                        app:SpinKit_Color="@color/dark_colorText" />
+
+
+                    <ImageView
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:id="@+id/img_tenant_change"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/ic_camera_alt_black_24dp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_colorText"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/garment_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="Name"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_14ssp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="@dimen/_4sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:text="|"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:textSize="@dimen/_15ssp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"/>
+                        <EditText
+                            android:id="@+id/et_tenant_name_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/white"
+                            android:textColor="@color/white"
+                            android:backgroundTint="@color/white"
+                            android:textSize="@dimen/_12ssp"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        ></LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:id="@+id/address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:text="ph.no"
+                            android:drawableLeft="@drawable/ic_phone_in_talk_black_24dp"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <TextView
+                            android:layout_width="@dimen/_4sdp"
+                            android:layout_height="wrap_content"
+                            android:text="|"
+                            android:layout_marginLeft="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:textSize="@dimen/_15ssp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"/>
+                        <EditText
+                            android:maxLength="10"
+                            android:id="@+id/et_tenant_phone_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/white"
+                            android:textColor="@color/white"
+                            android:backgroundTint="@color/white"
+                            android:textSize="@dimen/_10ssp"/>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:id="@+id/bidding_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:text="e-mail"
+                            android:drawableLeft="@drawable/ic_email_black_24dp"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10ssp" />
+
+                        <TextView
+                            android:layout_width="@dimen/_4sdp"
+                            android:layout_height="wrap_content"
+                            android:text="|"
+                            android:layout_marginLeft="@dimen/_4sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:textSize="@dimen/_15ssp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"/>
+
+                        <EditText
+                            android:id="@+id/et_tenant_email_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/white"
+                            android:textColor="@color/white"
+                            android:backgroundTint="@color/white"
+                            android:textSize="@dimen/_10ssp"/>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:id="@+id/view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:text="Address"
+                            android:drawableLeft="@drawable/ic_location_on_black_24dp"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10ssp"
+                            />
+
+                        <TextView
+                            android:layout_width="@dimen/_4sdp"
+                            android:layout_height="wrap_content"
+                            android:text="|"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:textSize="@dimen/_15ssp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"/>
+                        <EditText
+                            android:id="@+id/et_tenant_address_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/white"
+                            android:textColor="@color/white"
+                            android:backgroundTint="@color/white"
+                            android:textSize="@dimen/_10ssp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/white"
+                android:orientation="vertical"
+
+                ></LinearLayout>
+
+            <LinearLayout
+                android:background="@color/light_colorText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/_15sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Entry Date"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    >
+                    <TextView
+                        android:layout_marginRight="@dimen/_20sdp"
+                        android:textColor="@color/light_colorText"
+                        android:gravity="center"
+                        android:id="@+id/tv_tenant_date_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_20sdp"
+                        android:background="@drawable/add_pro_white"/>
+                    <ImageView
+                        android:id="@+id/iv_bus_date_edit"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_2sdp"
+                        android:visibility="visible"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/ic_date_range_black_24dp"
+                        android:layout_alignParentRight="true"/>
+
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/white"
+                android:orientation="vertical"
+
+                ></LinearLayout>
+
+            <LinearLayout
+                android:background="@color/light_colorText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/_15sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment Cycle"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp"
+                    android:textStyle="bold" />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:background="@drawable/add_pro_white">
+                    <Spinner
+                        android:id="@+id/payment_spinner_tenant_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_20sdp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_business_tenant"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/white"
+                android:orientation="vertical"
+
+                ></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/_20sdp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Billing address"
+
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    />
+
+
+                <EditText
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:singleLine="false"
+                    android:layout_gravity="center"
+                    android:id="@+id/et_tenant_billing_address"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/white"
+                    android:textSize="@dimen/_12ssp"
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/white"
+                android:orientation="vertical"
+
+                ></LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/_20sdp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Company GSTIN"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    />
+
+
+                <EditText
+                    android:gravity="center"
+                    android:hint="*******"
+                    android:layout_gravity="center"
+                    android:id="@+id/business_tenant_company_gstn"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/back"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/white"
+                    android:textSize="@dimen/_12ssp"
+
+                    />
+            </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            >
+            <TextView
+                android:background="@drawable/add_btn"
+                android:id="@+id/tv_tenant_submit"
+                android:textStyle="bold"
+                android:textSize="@dimen/_12ssp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:text="Submit"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/spin_kit2_tenant_edit"
+                style="@style/SpinKitView.Large.ThreeBounce"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                app:SpinKit_Color="@color/white" />
+
+
+        </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

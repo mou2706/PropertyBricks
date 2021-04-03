@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.Fragment_Property"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:id="@+id/lin"
+        android:gravity="right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:background="@drawable/add_pro_white"
+            android:id="@+id/tv_addproperty"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_gravity="center"
+            android:textColor="@color/dark_colorText"
+            android:paddingLeft="@dimen/_1sdp"
+            android:paddingRight="@dimen/_1sdp"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_20sdp"
+            android:text="ADD PROPERTY"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_8ssp"
+            android:textStyle="bold"
+
+            />
+
+        <ImageView
+            android:id="@+id/iv_addproperty"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/view_btn"
+            android:padding="@dimen/_2sdp"
+            android:src="@drawable/ic_add_black_24dp" />
+
+    </LinearLayout>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:visibility="visible"
+        android:layout_below="@+id/lin"
+        android:id="@+id/recycler_property"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rel_errorshow"
+        android:layout_below="@+id/lin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/cloud_off1"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:src="@drawable/ic_cloud_off_black_24dp"/>
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tv_error_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No internet connection"
+            android:layout_below="@id/cloud_off1"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
